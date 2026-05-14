@@ -14,6 +14,11 @@ const ColorHarmonizer: React.FC = () => {
         {type: 'Triada A', val: `hsl(${(hue + 120) % 360}, 70%, 50%)`},
         {type: 'Triada B', val: `hsl(${(hue + 240) % 360}, 70%, 50%)`},
     ];
+
+    const dynamicBox = {
+        backgroundColor: `hsl(${hue}, 80%, 40%)`,
+        border: `5px solid hsl(${(hue + 90) % 360}, 80%, 50%)`
+    };
     return (
         <section className="harmonies">
             <h2>Armonía de Colores</h2>
@@ -34,6 +39,12 @@ const ColorHarmonizer: React.FC = () => {
                         <span>{c.type}</span>
                     </div>
                 ))}
+            <div
+                className="dynamic-box"
+                style={dynamicBox}
+            >
+                <h3>Objeto</h3>
+            </div>
             </div>
         </section>
     )
