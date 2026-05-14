@@ -1,5 +1,6 @@
 import ColorHarmonizer from './components/ColorHarmonizer.tsx';
 import ContrastChecker from './components/ContrastChecker.tsx'
+import ColorRandom from './components/ColorRandom.tsx';
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
       <ColorHarmonizer />
       <hr />
       <ContrastChecker />
+      <hr />
+      <ColorRandom />
     </div>
   )
 }

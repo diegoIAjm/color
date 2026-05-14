@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import './../styles/ColorHarmonizer.scss';
 
+interface HarmonyColor {
+    type: string;
+    val: string;
+}
+
 const ColorHarmonizer: React.FC = () => {
     const [hue, setHue] = useState<number>(180);
-    const getHarmonies = (h: number) => [
-        {type: 'Base', val: `hsl(${h}, 70%, 50%)`},
-        {type: 'Complementary', val: `hsl(${(h + 180) % 360}, 70%, 50%)`},
-        {type: 'Triada A', val: `hsl(${(h + 120) % 360}, 70%, 50%)`},
-        {type: 'Triada B', val: `hsl(${(h + 240) % 360}, 70%, 50%)`},
+    const harmonies: HarmonyColor[] = [
+        {type: 'Base', val: `hsl(${hue}, 70%, 50%)`},
+        {type: 'Complementary', val: `hsl(${(hue + 180) % 360}, 70%, 50%)`},
+        {type: 'Triada A', val: `hsl(${(hue + 120) % 360}, 70%, 50%)`},
+        {type: 'Triada B', val: `hsl(${(hue + 240) % 360}, 70%, 50%)`},
     ];
     return (
         <section className="harmonies">
+            <h2>Armonía de Colores</h2>
             <input
                 type="range"
                 min="0"
@@ -19,7 +25,7 @@ const ColorHarmonizer: React.FC = () => {
                 onChange={(e) => setHue(Number(e.target.value))}
             />
             <div className="grid">
-                {getHarmonies(hue).map((c) => (
+                {harmonies.map((c) => (
                     <div 
                         key={c.type} 
                         className="card" 
