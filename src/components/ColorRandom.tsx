@@ -31,16 +31,18 @@ const RandomColors: React.FC = () => {
 
             <h2>Colores Aleatorios</h2>
 
-            <div className="grid">
+            <div className="big-card">
+
                 {colors.map((color, index) => (
                     <div
                         key={index}
-                        className="card"
+                        className="mini-card"
                         style={{ backgroundColor: color }}
                     >
                         <p>{color}</p>
                     </div>
                 ))}
+
             </div>
 
         </section>

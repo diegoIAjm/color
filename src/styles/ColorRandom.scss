@@ -2,16 +2,18 @@
     margin-top: 40px;
 }
 
-.grid {
-    display: flex;
-    gap: 20px;
+.big-card {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 16px;
+    overflow: hidden;
     margin-top: 20px;
 }
 
-.card {
-    width: 150px;
-    height: 150px;
-    border-radius: 12px;
+.mini-card {
     display: flex;
     justify-content: center;
     align-items: center;
