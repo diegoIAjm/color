@@ -45,15 +45,8 @@ $transition-speed: 0.3s;
 }
 
 .dynamic-box {
-    width: 300px;
+    width: 400px;
     height: 150px;
     margin-top: 30px;
     border-radius: 16px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-    font-weight: bold;
 }
